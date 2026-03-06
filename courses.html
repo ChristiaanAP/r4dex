@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raja Ampat Dive Experience | Scuba & Snorkeling</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        ocean: {
+                            light: '#e0f2fe', // Soft sky blue for hover states
+                            DEFAULT: '#0ea5e9', // Bright ocean blue
+                            dark: '#0284c7', // Deep ocean blue for contrast
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-700 bg-white antialiased flex flex-col min-h-screen">
+
+    <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-sm z-50 transition-all duration-300 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-24 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="font-bold text-2xl text-ocean-dark tracking-tight flex items-center gap-2">
+                        <i class="fa-solid fa-water text-ocean"></i> R4DX
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-ocean font-medium transition">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-ocean font-medium transition">About Us</a>
+                    
+                    <div class="relative group py-8">
+                        <button class="flex items-center gap-1 text-gray-600 hover:text-ocean font-medium transition">
+                            Services <i class="fa-solid fa-chevron-down text-xs mt-1 transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="absolute left-0 top-full w-56 bg-white shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top border border-gray-50 overflow-hidden">
+                            <a href="courses.html" class="block px-5 py-3 text-sm text-gray-600 hover:bg-ocean-light hover:text-ocean-dark transition">Dive Courses</a>
+                            <a href="trips.html" class="block px-5 py-3 text-sm text-gray-600 hover:bg-ocean-light hover:text-ocean-dark transition">Dive Trips & Routes</a>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="bg-ocean text-white px-7 py-2.5 rounded-full font-medium hover:bg-ocean-dark transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Book Now</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-ocean focus:outline-none text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-3 text-ocean font-medium bg-ocean-light rounded-lg">Home</a>
+                <a href="about.html" class="block px-3 py-3 text-gray-600 font-medium hover:bg-gray-50 rounded-lg">About Us</a>
+                <a href="courses.html" class="block px-3 py-3 text-gray-600 font-medium hover:bg-gray-50 rounded-lg">Dive Courses</a>
+                <a href="trips.html" class="block px-3 py-3 text-gray-600 font-medium hover:bg-gray-50 rounded-lg">Dive Trips & Routes</a>
+                <a href="contact.html" class="block mt-4 text-center bg-ocean text-white px-4 py-3 rounded-xl font-medium shadow-md">Book Now</a>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="flex-grow pt-24">
+        
+        <section class="bg-ocean-light/30 py-20 border-b border-ocean-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">PADI Dive Courses</h1>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    From your very first breath underwater to becoming a Dive Master. Unlock your freedom and explore the ocean with our certified multilingual instructors.
+                </p>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-gray-50 rounded-3xl overflow-hidden shadow-sm border border-gray-100 flex flex-col lg:flex-row">
+                    <div class="lg:w-2/5 h-64 lg:h-auto relative">
+                        <img src="https://images.unsplash.com/photo-1518467166778-b88f373ffec7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Beginner Scuba Diving" class="absolute inset-0 w-full h-full object-cover">
+                    </div>
+                    <div class="lg:w-3/5 p-10 md:p-14 flex flex-col justify-center">
+                        <span class="text-ocean font-bold tracking-wider uppercase text-sm mb-2">Perfect For Beginners</span>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Discover Scuba Diving (DSD)</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Curious about diving? The Discover Scuba Diving program is your perfect introduction. Experience the thrill of breathing underwater under the close guidance of our certified instructors, and explore the vibrant shallow marine life of Raja Ampat safely.
+                        </p>
+                        <div class="mb-8">
+                            <h4 class="font-semibold text-gray-900 mb-3">What's Included:</h4>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="bg-white px-4 py-2 rounded-full text-sm text-gray-600 shadow-sm border border-gray-100"><i class="fa-solid fa-person-swimming text-ocean mr-2"></i>Instructor</span>
+                                <span class="bg-white px-4 py-2 rounded-full text-sm text-gray-600 shadow-sm border border-gray-100"><i class="fa-solid fa-mask text-ocean mr-2"></i>Full Equipment</span>
+                                <span class="bg-white px-4 py-2 rounded-full text-sm text-gray-600 shadow-sm border border-gray-100"><i class="fa-solid fa-droplet text-ocean mr-2"></i>Tanks & Weights</span>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="contact.html" class="inline-block bg-ocean text-white px-8 py-3 rounded-full font-medium hover:bg-ocean-dark transition shadow-md">Book Your First Dive</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Core Certifications</h2>
+                    <div class="w-20 h-1 bg-ocean mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+                        <div class="w-14 h-14 bg-ocean-light text-ocean rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-water"></i>
+                        </div>
+                        <h3 class="font-bold text-2xl text-gray-900 mb-2">Open Water Diver</h3>
+                        <p class="text-ocean text-sm font-medium mb-4">"Discover the Ocean, Unlock Your Freedom"</p>
+                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">The world's most recognized scuba certification. Your gateway to endless ocean exploration up to 18 meters.</p>
+                        <ul class="text-sm text-gray-500 space-y-2 mb-8 border-t border-gray-50 pt-4">
+                            <li><i class="fa-solid fa-check text-ocean mr-2"></i> E-Learning Included</li>
+                            <li><i class="fa-solid fa-check text-ocean mr-2"></i> Dive Equipment Provided</li>
+                        </ul>
+                        <a href="contact.html" class="text-ocean font-semibold hover:text-ocean-dark flex items-center gap-2">Inquire Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+                        <div class="w-14 h-14 bg-ocean-light text-ocean rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-compass"></i>
+                        </div>
+                        <h3 class="font-bold text-2xl text-gray-900 mb-2">Advanced Open Water</h3>
+                        <p class="text-ocean text-sm font-medium mb-4">Expand Your Horizons</p>
+                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">Advance your skills, improve your buoyancy, and unlock deeper dive sites up to 30 meters.</p>
+                        <ul class="text-sm text-gray-500 space-y-2 mb-8 border-t border-gray-50 pt-4">
+                            <li><i class="fa-solid fa-check text-ocean mr-2"></i> 5 Adventure Dives</li>
+                            <li><i class="fa-solid fa-check text-ocean mr-2"></i> Deep & Navigation included</li>
+                        </ul>
+                        <a href="contact.html" class="text-ocean font-semibold hover:text-ocean-dark flex items-center gap-2">Inquire Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+                        <div class="w-14 h-14 bg-ocean-light text-ocean rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-life-ring"></i>
+                        </div>
+                        <h3 class="font-bold text-2xl text-gray-900 mb-2">Rescue Diver + EFR</h3>
+                        <p class="text-ocean text-sm font-medium mb-4">Be A Better Buddy</p>
+                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">Learn to prevent and manage problems in the water. The most challenging, yet rewarding course.</p>
+                        <ul class="text-sm text-gray-500 space-y-2 mb-8 border-t border-gray-50 pt-4">
+                            <li><i class="fa-solid fa-check text-ocean mr-2"></i> Emergency First Response</li>
+                            <li><i class="fa-solid fa-check text-ocean mr-2"></i> Rescue Scenarios</li>
+                        </ul>
+                        <a href="contact.html" class="text-ocean font-semibold hover:text-ocean-dark flex items-center gap-2">Inquire Now <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-ocean text-white rounded-3xl p-8 md:p-12 shadow-lg flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+                    <div class="absolute -right-20 -top-20 opacity-10">
+                        <i class="fa-solid fa-star text-9xl"></i>
+                    </div>
+                    <div class="relative z-10 md:w-2/3">
+                        <h3 class="font-bold text-3xl mb-3">Become a Dive Master</h3>
+                        <p class="text-ocean-light text-lg">Turn your passion into a career. Join our professional training program and learn to lead dives in the legendary currents of Raja Ampat.</p>
+                    </div>
+                    <div class="relative z-10">
+                        <a href="contact.html" class="bg-white text-ocean px-8 py-3 rounded-full font-bold hover:bg-gray-50 transition shadow-md whitespace-nowrap">Start Your Pro Journey</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8">Specialty Courses</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex items-center gap-4">
+                            <i class="fa-solid fa-wind text-ocean text-xl w-8 text-center"></i>
+                            <span class="font-medium text-gray-700">Enriched Air (Nitrox)</span>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex items-center gap-4">
+                            <i class="fa-solid fa-arrow-down text-ocean text-xl w-8 text-center"></i>
+                            <span class="font-medium text-gray-700">Deep Dive</span>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex items-center gap-4">
+                            <i class="fa-solid fa-camera text-ocean text-xl w-8 text-center"></i>
+                            <span class="font-medium text-gray-700">Digital Photography</span>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex items-center gap-4">
+                            <i class="fa-solid fa-moon text-ocean text-xl w-8 text-center"></i>
+                            <span class="font-medium text-gray-700">Night Dive</span>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex items-center gap-4 sm:col-span-2">
+                            <i class="fa-solid fa-truck-medical text-ocean text-xl w-8 text-center"></i>
+                            <span class="font-medium text-gray-700">Emergency Oxygen Provider</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900 rounded-3xl p-10 text-white relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Scuba Gear" class="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-overlay">
+                    
+                    <div class="relative z-10">
+                        <h2 class="text-3xl font-bold mb-4 text-white">Equipment Rental</h2>
+                        <p class="text-gray-400 mb-8">Gear up with our meticulously maintained, complete diving sets. Ensuring top-notch performance and safety for your adventure.</p>
+                        
+                        <h4 class="font-semibold text-ocean-light mb-4 uppercase text-sm tracking-wider">Full Set Includes:</h4>
+                        <ul class="grid grid-cols-2 gap-3 text-sm text-gray-300">
+                            <li><i class="fa-solid fa-check text-ocean mr-2"></i> Mask & Fins</li>
+                            <li><i class="fa-solid fa-check text-ocean mr-2"></i> BCD</li>
+                            <li><i class="fa-solid fa-check text-ocean mr-2"></i> Regulator</li>
+                            <li><i class="fa-solid fa-check text-ocean mr-2"></i> Wetsuit</li>
+                            <li><i class="fa-solid fa-check text-ocean mr-2"></i> Tank</li>
+                            <li><i class="fa-solid fa-check text-ocean mr-2"></i> Weight Belt</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-gray-300 py-16 border-t-4 border-ocean">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="md:col-span-1">
+                <a href="index.html" class="font-bold text-2xl text-white tracking-tight flex items-center gap-2 mb-6">
+                    <i class="fa-solid fa-water text-ocean"></i> R4DX
+                </a>
+                <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                    Delivering more than just a dive – we offer an adventure of a lifetime. The trusted choice for exploring the underwater paradise of Raja Ampat.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-ocean transition text-white"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-ocean transition text-white"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-ocean transition text-white"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-6">Explore</h3>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="index.html" class="hover:text-ocean transition">Home</a></li>
+                    <li><a href="about.html" class="hover:text-ocean transition">About Us</a></li>
+                    <li><a href="courses.html" class="hover:text-ocean transition">Dive Courses</a></li>
+                    <li><a href="trips.html" class="hover:text-ocean transition">Dive Trips & Routes</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-6">Support</h3>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="contact.html" class="hover:text-ocean transition">Contact & Booking</a></li>
+                    <li><a href="#" class="hover:text-ocean transition">Equipment Rental</a></li>
+                    <li><a href="#" class="hover:text-ocean transition">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-6">Get in Touch</h3>
+                <ul class="space-y-4 text-sm">
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-location-dot mt-1 mr-3 text-ocean"></i>
+                        <span>Raja Ampat, West Papua,<br>Indonesia</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa-brands fa-whatsapp mr-3 text-ocean"></i>
+                        <span>+62 (Your Number Here)</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa-solid fa-envelope mr-3 text-ocean"></i>
+                        <span>info@rajaampatdiveexperience.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-500">
+            <p>&copy; 2024 Raja Ampat Dive Experience. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        });
+    </script>
+</body>
+</html>

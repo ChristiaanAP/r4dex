@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raja Ampat Dive Experience | Scuba & Snorkeling</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        ocean: {
+                            light: '#e0f2fe', // Soft sky blue for hover states
+                            DEFAULT: '#0ea5e9', // Bright ocean blue
+                            dark: '#0284c7', // Deep ocean blue for contrast
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-700 bg-white antialiased flex flex-col min-h-screen">
+
+    <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-sm z-50 transition-all duration-300 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-24 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="font-bold text-2xl text-ocean-dark tracking-tight flex items-center gap-2">
+                        <i class="fa-solid fa-water text-ocean"></i> R4DX
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-ocean font-medium transition">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-ocean font-medium transition">About Us</a>
+                    
+                    <div class="relative group py-8">
+                        <button class="flex items-center gap-1 text-gray-600 hover:text-ocean font-medium transition">
+                            Services <i class="fa-solid fa-chevron-down text-xs mt-1 transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="absolute left-0 top-full w-56 bg-white shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top border border-gray-50 overflow-hidden">
+                            <a href="courses.html" class="block px-5 py-3 text-sm text-gray-600 hover:bg-ocean-light hover:text-ocean-dark transition">Dive Courses</a>
+                            <a href="trips.html" class="block px-5 py-3 text-sm text-gray-600 hover:bg-ocean-light hover:text-ocean-dark transition">Dive Trips & Routes</a>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="bg-ocean text-white px-7 py-2.5 rounded-full font-medium hover:bg-ocean-dark transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Book Now</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-ocean focus:outline-none text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-3 text-ocean font-medium bg-ocean-light rounded-lg">Home</a>
+                <a href="about.html" class="block px-3 py-3 text-gray-600 font-medium hover:bg-gray-50 rounded-lg">About Us</a>
+                <a href="courses.html" class="block px-3 py-3 text-gray-600 font-medium hover:bg-gray-50 rounded-lg">Dive Courses</a>
+                <a href="trips.html" class="block px-3 py-3 text-gray-600 font-medium hover:bg-gray-50 rounded-lg">Dive Trips & Routes</a>
+                <a href="contact.html" class="block mt-4 text-center bg-ocean text-white px-4 py-3 rounded-xl font-medium shadow-md">Book Now</a>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="flex-grow pt-24">
+        
+        <section class="bg-ocean-light/30 py-20 border-b border-ocean-light relative overflow-hidden">
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-white opacity-40 blur-3xl"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <span class="text-ocean font-bold tracking-wider uppercase text-sm mb-2 block">The Ultimate Adventure</span>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">Dive Trips & Boat Routes</h1>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                    Explore over 15+ pristine dive sites through our meticulously planned boat routes. From the vibrant corals of Melissa Garden to the majestic mantas of Manta Sandy, your Raja Ampat adventure starts here.
+                </p>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                    
+                    <div class="bg-gray-50 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group flex flex-col">
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1682687220198-88e9bdea9931?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Route 1 Dive Sites" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                            <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-4 py-1 rounded-full text-ocean font-bold text-sm shadow-sm">
+                                Route 1
+                            </div>
+                        </div>
+                        <div class="p-8 flex-grow flex flex-col">
+                            <h3 class="font-bold text-2xl text-gray-900 mb-2">The Classics</h3>
+                            <p class="text-gray-500 text-sm mb-6 pb-6 border-b border-gray-200">Experience the signature walls and reefs that put Raja Ampat on the map.</p>
+                            
+                            <ul class="space-y-3 mb-8 flex-grow text-gray-700 font-medium text-sm">
+                                <li><i class="fa-solid fa-location-dot text-ocean-light mr-3"></i>Mioskon</li>
+                                <li><i class="fa-solid fa-location-dot text-ocean-light mr-3"></i>Friwen Wall</li>
+                                <li><i class="fa-solid fa-location-dot text-ocean-light mr-3"></i>Batu Lima</li>
+                                <li><i class="fa-solid fa-location-dot text-ocean-light mr-3"></i>Blue Magic</li>
+                                <li><i class="fa-solid fa-location-dot text-ocean-light mr-3"></i>Sardine Reef</li>
+                                <li><i class="fa-solid fa-location-dot text-ocean-light mr-3"></i>Chicken Reef</li>
+                                <li><i class="fa-solid fa-location-dot text-ocean-light mr-3"></i>Saonek Monde</li>
+                                <li><i class="fa-solid fa-location-dot text-ocean-light mr-3"></i>Lao-lao</li>
+                                <li><i class="fa-solid fa-location-dot text-ocean-light mr-3"></i>Mike's Point</li>
+                            </ul>
+                            <a href="contact.html" class="block text-center bg-white border-2 border-ocean text-ocean px-6 py-2.5 rounded-full font-medium hover:bg-ocean hover:text-white transition w-full">Book This Route</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group flex flex-col relative transform lg:-translate-y-4">
+                        <div class="absolute top-0 right-0 z-20">
+                            <div class="bg-amber-400 text-amber-900 text-xs font-bold uppercase tracking-wider py-1.5 px-4 rounded-bl-xl shadow-sm">Most Popular</div>
+                        </div>
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Route 2 Manta Rays" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                            <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-4 py-1 rounded-full text-ocean font-bold text-sm shadow-sm">
+                                Route 2
+                            </div>
+                        </div>
+                        <div class="p-8 flex-grow flex flex-col">
+                            <h3 class="font-bold text-2xl text-gray-900 mb-2">The Manta Trail</h3>
+                            <p class="text-gray-500 text-sm mb-6 pb-6 border-b border-gray-200">World record fish counts and unforgettable encounters with majestic Manta Rays.</p>
+                            
+                            <ul class="space-y-3 mb-8 flex-grow text-gray-700 font-medium text-sm">
+                                <li><i class="fa-solid fa-location-dot text-ocean mr-3"></i>Cape Kri</li>
+                                <li><i class="fa-solid fa-location-dot text-ocean mr-3"></i>Yenbuba</li>
+                                <li><i class="fa-solid fa-location-dot text-ocean mr-3"></i>Sawandarek</li>
+                                <li><i class="fa-solid fa-location-dot text-ocean mr-3"></i>Manta Sandy</li>
+                                <li><i class="fa-solid fa-location-dot text-ocean mr-3"></i>Manta Ridge</li>
+                                <li><i class="fa-solid fa-location-dot text-ocean mr-3"></i>Arborek</li>
+                                <li><i class="fa-solid fa-location-dot text-ocean mr-3"></i>Mansuar</li>
+                            </ul>
+                            <a href="contact.html" class="block text-center bg-ocean text-white px-6 py-2.5 rounded-full font-medium hover:bg-ocean-dark transition w-full shadow-md">Book This Route</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group flex flex-col">
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1582967788606-a171c1080cb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Route 3 Melissa Garden" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                            <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-4 py-1 rounded-full text-ocean font-bold text-sm shadow-sm">
+                                Route 3
+                            </div>
+                        </div>
+                        <div class="p-8 flex-grow flex flex-col">
+                            <h3 class="font-bold text-2xl text-gray-900 mb-2">The Coral Gardens</h3>
+                            <p class="text-gray-500 text-sm mb-6 pb-6 border-b border-gray-200">Immerse yourself in endless fields of pristine, vibrant hard and soft corals.</p>
+                            
+                            <ul class="space-y-3 mb-8 flex-grow text-gray-700 font-medium text-sm">
+                                <li><i class="fa-solid fa-location-dot text-ocean-light mr-3"></i>Melissa Garden</li>
+                                <li><i class="fa-solid fa-location-dot text-ocean-light mr-3"></i>Batu Rufas</li>
+                                <li><i class="fa-solid fa-location-dot text-ocean-light mr-3"></i>Pam</li>
+                            </ul>
+                            <a href="contact.html" class="block text-center bg-white border-2 border-ocean text-ocean px-6 py-2.5 rounded-full font-medium hover:bg-ocean hover:text-white transition w-full">Book This Route</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-gray-900 text-white relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold mb-4">Over 15+ World-Class Dive Sites</h2>
+                    <div class="w-20 h-1 bg-ocean mx-auto rounded-full mb-6"></div>
+                    <p class="text-gray-400 max-w-2xl mx-auto">A glimpse into the legendary spots you will explore with Raja Ampat Dive Experience.</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    
+                    <div class="relative h-48 md:h-64 rounded-2xl overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1622353151474-065d6bd58064?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mioskon" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <h4 class="font-bold text-lg tracking-wider">MIOSKON</h4>
+                        </div>
+                    </div>
+
+                    <div class="relative h-48 md:h-64 rounded-2xl overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1518467166778-b88f373ffec7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cape Kri" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <h4 class="font-bold text-lg tracking-wider">CAPE KRI</h4>
+                        </div>
+                    </div>
+
+                    <div class="relative h-48 md:h-64 rounded-2xl overflow-hidden group md:col-span-2">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Manta Ridge" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <h4 class="font-bold text-lg tracking-wider">MANTA RIDGE</h4>
+                            <p class="text-ocean-light text-sm hidden md:block">World famous Manta cleaning station</p>
+                        </div>
+                    </div>
+
+                    <div class="relative h-48 md:h-64 rounded-2xl overflow-hidden group md:col-span-2">
+                        <img src="https://images.unsplash.com/photo-1682687982501-1e58ea815214?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Blue Magic" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <h4 class="font-bold text-lg tracking-wider">BLUE MAGIC</h4>
+                            <p class="text-ocean-light text-sm hidden md:block">Oceanic mantas and schooling pelagics</p>
+                        </div>
+                    </div>
+
+                    <div class="relative h-48 md:h-64 rounded-2xl overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Friwen Wall" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <h4 class="font-bold text-lg tracking-wider">FRIWEN WALL</h4>
+                        </div>
+                    </div>
+
+                    <div class="relative h-48 md:h-64 rounded-2xl overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1582967788606-a171c1080cb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Melissa Garden" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700 opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <h4 class="font-bold text-lg tracking-wider">MELISSA GARDEN</h4>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="text-center mt-12">
+                    <p class="text-gray-400 text-sm italic">...and many more sites including Batu Lima, Lao Lao, Chicken Reef, Yenbuba, and Sawandarek.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="bg-gray-900 text-gray-300 py-16 border-t-4 border-ocean">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="md:col-span-1">
+                <a href="index.html" class="font-bold text-2xl text-white tracking-tight flex items-center gap-2 mb-6">
+                    <i class="fa-solid fa-water text-ocean"></i> R4DX
+                </a>
+                <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                    Delivering more than just a dive – we offer an adventure of a lifetime. The trusted choice for exploring the underwater paradise of Raja Ampat.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-ocean transition text-white"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-ocean transition text-white"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-ocean transition text-white"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-6">Explore</h3>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="index.html" class="hover:text-ocean transition">Home</a></li>
+                    <li><a href="about.html" class="hover:text-ocean transition">About Us</a></li>
+                    <li><a href="courses.html" class="hover:text-ocean transition">Dive Courses</a></li>
+                    <li><a href="trips.html" class="hover:text-ocean transition">Dive Trips & Routes</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-6">Support</h3>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="contact.html" class="hover:text-ocean transition">Contact & Booking</a></li>
+                    <li><a href="#" class="hover:text-ocean transition">Equipment Rental</a></li>
+                    <li><a href="#" class="hover:text-ocean transition">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-6">Get in Touch</h3>
+                <ul class="space-y-4 text-sm">
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-location-dot mt-1 mr-3 text-ocean"></i>
+                        <span>Raja Ampat, West Papua,<br>Indonesia</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa-brands fa-whatsapp mr-3 text-ocean"></i>
+                        <span>+62 (Your Number Here)</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa-solid fa-envelope mr-3 text-ocean"></i>
+                        <span>info@rajaampatdiveexperience.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-500">
+            <p>&copy; 2024 Raja Ampat Dive Experience. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        });
+    </script>
+</body>
+</html>

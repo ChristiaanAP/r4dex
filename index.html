@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raja Ampat Dive Experience | Scuba & Snorkeling</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        ocean: {
+                            light: '#e0f2fe', // Soft sky blue for hover states
+                            DEFAULT: '#0ea5e9', // Bright ocean blue
+                            dark: '#0284c7', // Deep ocean blue for contrast
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-700 bg-white antialiased flex flex-col min-h-screen">
+
+    <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-sm z-50 transition-all duration-300 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-24 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="font-bold text-2xl text-ocean-dark tracking-tight flex items-center gap-2">
+                        <i class="fa-solid fa-water text-ocean"></i> R4DX
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-ocean font-medium transition">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-ocean font-medium transition">About Us</a>
+                    
+                    <div class="relative group py-8">
+                        <button class="flex items-center gap-1 text-gray-600 hover:text-ocean font-medium transition">
+                            Services <i class="fa-solid fa-chevron-down text-xs mt-1 transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="absolute left-0 top-full w-56 bg-white shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top border border-gray-50 overflow-hidden">
+                            <a href="courses.html" class="block px-5 py-3 text-sm text-gray-600 hover:bg-ocean-light hover:text-ocean-dark transition">Dive Courses</a>
+                            <a href="trips.html" class="block px-5 py-3 text-sm text-gray-600 hover:bg-ocean-light hover:text-ocean-dark transition">Dive Trips & Routes</a>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="bg-ocean text-white px-7 py-2.5 rounded-full font-medium hover:bg-ocean-dark transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Book Now</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-ocean focus:outline-none text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-3 text-ocean font-medium bg-ocean-light rounded-lg">Home</a>
+                <a href="about.html" class="block px-3 py-3 text-gray-600 font-medium hover:bg-gray-50 rounded-lg">About Us</a>
+                <a href="courses.html" class="block px-3 py-3 text-gray-600 font-medium hover:bg-gray-50 rounded-lg">Dive Courses</a>
+                <a href="trips.html" class="block px-3 py-3 text-gray-600 font-medium hover:bg-gray-50 rounded-lg">Dive Trips & Routes</a>
+                <a href="contact.html" class="block mt-4 text-center bg-ocean text-white px-4 py-3 rounded-xl font-medium shadow-md">Book Now</a>
+            </div>
+        </div>
+    </nav>
+    <main class="flex-grow">
+        <section class="relative pt-32 pb-32 flex content-center items-center justify-center min-h-[90vh]">
+            <div class="absolute top-0 w-full h-full bg-center bg-cover bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+                <span class="w-full h-full absolute opacity-30 bg-gradient-to-b from-black/60 to-ocean-dark/40"></span>
+            </div>
+            <div class="container relative mx-auto px-4 text-center z-10 mt-16">
+                <span class="text-ocean-light font-semibold tracking-wider uppercase text-sm mb-4 block drop-shadow-md">Welcome to the Paradise</span>
+                <h1 class="text-white font-bold text-5xl md:text-7xl drop-shadow-lg mb-6 leading-tight">
+                    Experience The Beauty <br> Of <span class="text-ocean-light">Raja Ampat</span>
+                </h1>
+                <p class="mt-4 text-lg text-white max-w-2xl mx-auto drop-shadow-md mb-10 font-light">
+                    Discover breathtaking underwater wonders, vibrant coral reefs, and majestic marine life. Dive into an adventure of a lifetime with our certified multilingual team.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="courses.html" class="bg-ocean hover:bg-ocean-dark text-white font-medium text-lg px-8 py-4 rounded-full shadow-lg transition transform hover:-translate-y-1">
+                        Explore Dive Courses
+                    </a>
+                    <a href="trips.html" class="bg-white text-ocean hover:bg-gray-50 font-medium text-lg px-8 py-4 rounded-full shadow-lg transition transform hover:-translate-y-1">
+                        View Boat Routes
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-white relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">More Than Just A Dive.<br>An Adventure of a Lifetime.</h2>
+                        <div class="w-20 h-1 bg-ocean mb-6 rounded-full"></div>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            At Raja Ampat Dive Experience, our dedication to quality, personalized service, and exceptional experiences sets us apart. Whether you are taking your first breath underwater or you are an advanced diver seeking the famous currents of Blue Magic, we have a route for you.
+                        </p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-ocean mt-1 mr-3"></i>
+                                <span class="text-gray-700"><strong>Skilled Multilingual Team:</strong> Ensuring your journey is smooth and personalized.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-ocean mt-1 mr-3"></i>
+                                <span class="text-gray-700"><strong>Certificate of Excellence:</strong> Recognized for outstanding guest satisfaction.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check-circle text-ocean mt-1 mr-3"></i>
+                                <span class="text-gray-700"><strong>Small, Personalized Groups:</strong> Tailored to match your preferences and skill levels.</span>
+                            </li>
+                        </ul>
+                        <a href="about.html" class="text-ocean font-semibold hover:text-ocean-dark flex items-center gap-2">Read Our Story <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1682687982501-1e58ea815214?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Diving in Raja Ampat" class="rounded-2xl shadow-2xl relative z-10 w-full object-cover h-[500px]">
+                        <div class="absolute -bottom-6 -right-6 w-full h-full bg-ocean-light rounded-2xl z-0"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">What We Offer</h2>
+                <div class="w-20 h-1 bg-ocean mx-auto mb-12 rounded-full"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                    <a href="courses.html" class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 block text-left border border-gray-100">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1544550581-5f7ceaf7f992?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="PADI Courses" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="font-bold text-2xl text-gray-900 mb-3 group-hover:text-ocean transition">PADI Dive Courses</h3>
+                            <p class="text-gray-600 mb-6">From beginner Open Water to Dive Master. Get certified in the most biodiverse marine environment on earth.</p>
+                            <span class="text-ocean font-medium flex items-center gap-2">View All Courses <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                    
+                    <a href="trips.html" class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 block text-left border border-gray-100">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1582967788606-a171c1080cb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Boat Routes" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="font-bold text-2xl text-gray-900 mb-3 group-hover:text-ocean transition">Dive Trips & Boat Routes</h3>
+                            <p class="text-gray-600 mb-6">Explore Mioskon, Cape Kri, Blue Magic and more. Over 15+ pristine dive sites meticulously planned across 3 dedicated routes.</p>
+                            <span class="text-ocean font-medium flex items-center gap-2">Explore Routes <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-300 py-16 border-t-4 border-ocean">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="md:col-span-1">
+                <a href="index.html" class="font-bold text-2xl text-white tracking-tight flex items-center gap-2 mb-6">
+                    <i class="fa-solid fa-water text-ocean"></i> R4DX
+                </a>
+                <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                    Delivering more than just a dive – we offer an adventure of a lifetime. The trusted choice for exploring the underwater paradise of Raja Ampat.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-ocean transition text-white"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-ocean transition text-white"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-ocean transition text-white"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-6">Explore</h3>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="index.html" class="hover:text-ocean transition">Home</a></li>
+                    <li><a href="about.html" class="hover:text-ocean transition">About Us</a></li>
+                    <li><a href="courses.html" class="hover:text-ocean transition">Dive Courses</a></li>
+                    <li><a href="trips.html" class="hover:text-ocean transition">Dive Trips & Routes</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-6">Support</h3>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="contact.html" class="hover:text-ocean transition">Contact & Booking</a></li>
+                    <li><a href="#" class="hover:text-ocean transition">Equipment Rental</a></li>
+                    <li><a href="#" class="hover:text-ocean transition">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-semibold text-white mb-6">Get in Touch</h3>
+                <ul class="space-y-4 text-sm">
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-location-dot mt-1 mr-3 text-ocean"></i>
+                        <span>Raja Ampat, West Papua,<br>Indonesia</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa-brands fa-whatsapp mr-3 text-ocean"></i>
+                        <span>+62 (Your Number Here)</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa-solid fa-envelope mr-3 text-ocean"></i>
+                        <span>info@rajaampatdiveexperience.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-500">
+            <p>&copy; 2024 Raja Ampat Dive Experience. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        });
+    </script>
+</body>
+</html>
