@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://christiaanap.github.io/raja-ampat-dive/index.html</loc>
+    <loc>https://christiaanap.github.io/r4dex/index.html</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://christiaanap.github.io/raja-ampat-dive/about.html</loc>
+    <loc>https://christiaanap.github.io/r4dex/about.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://christiaanap.github.io/raja-ampat-dive/courses.html</loc>
+    <loc>https://christiaanap.github.io/r4dex/courses.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://christiaanap.github.io/raja-ampat-dive/trips.html</loc>
+    <loc>https://christiaanap.github.io/r4dex/trips.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://christiaanap.github.io/raja-ampat-dive/contact.html</loc>
+    <loc>https://christiaanap.github.io/r4dex/contact.html</loc>
     <priority>0.9</priority>
   </url>
 </urlset>
